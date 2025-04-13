@@ -1,24 +1,74 @@
-# README
+# 🔗 URL Shortener API (Rails)
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+This is the backend API for the URL Shortener app, built with **Ruby on Rails**.
 
-Things you may want to cover:
+---
 
-* Ruby version
+## 🚀 Setup Instructions
 
-* System dependencies
+### 🖥️ Prerequisites
 
-* Configuration
+- Ruby (>= 3.2)
+- Rails (>= 7.1 or 8.0)
+- PostgreSQL or SQLite
+- Bundler
 
-* Database creation
+---
 
-* Database initialization
+### 📦 Setup
 
-* How to run the test suite
+```bash
+# Install dependencies
+bundle install
 
-* Services (job queues, cache servers, search engines, etc.)
+# Setup the database
+rails db:create
+rails db:migrate
 
-* Deployment instructions
+# Run the server
+rails server
+```
 
-* ...
+> The server runs on: http://localhost:3000
+
+---
+
+## ✅ Features
+
+- Shorten long URLs
+- Prevent duplicates
+- Redirect to original URL
+- Delete shortened URL
+
+---
+
+## 🧪 Running Tests
+
+```bash
+bundle exec rspec
+```
+
+---
+
+## 🛡️ API Endpoints
+
+| Method | Endpoint             | Description                    |
+|--------|----------------------|--------------------------------|
+| GET    | /urls                | List all URLs                  |
+| POST   | /urls                | Create a new short URL         |
+| GET    | /:short              | Redirect to original URL       |
+| DELETE | /urls/:id            | Delete a URL                   |
+
+---
+
+## ⚙️ Technologies Used
+
+- Ruby on Rails
+- RSpec (for testing)
+- SQLite3 / PostgreSQL
+
+---
+
+## 📜 License
+
+MIT
